@@ -7,7 +7,7 @@ pipeline {
   stages {
     stage('Checkout Source') {
       steps {
-        git 'https://github.com/rupeshsaini09/rupesh-webapp.git'
+        git 'https://github.com/rohitvyawahare/myapp.git'
       }
     }
     stage('Build image') {
@@ -33,7 +33,7 @@ pipeline {
       steps {
         script {
           sh "ls"
-          sh 'kubectl apply -f app_deploy.json'
+          sh 'kubectl apply -f myapp_deploy.yml'
           sh "pwd"
           sh "ip a"
         }
